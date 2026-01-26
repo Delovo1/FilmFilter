@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FilmFilter/static/css/main.37e6e8d1.css",
+    "main.js": "/FilmFilter/static/js/main.995ec3ef.js",
+    "index.html": "/FilmFilter/index.html",
+    "main.37e6e8d1.css.map": "/FilmFilter/static/css/main.37e6e8d1.css.map",
+    "main.995ec3ef.js.map": "/FilmFilter/static/js/main.995ec3ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37e6e8d1.css",
+    "static/js/main.995ec3ef.js"
+  ]
+}
