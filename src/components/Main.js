@@ -5,7 +5,7 @@ export default function Main({ films }) {
       {films.map((film) => {
         return (
           <div className="film" id={film.id} key={film.id}>
-            <img src={film.poster}></img>
+            <img src={film.poster} alt="filmPoster"></img>
             <h3>{film.title}</h3>
             <div className="categories">
               <p>{film.year}</p>
@@ -29,7 +29,6 @@ export default function Main({ films }) {
 //     title: "The Matrix",
 //     year: 1999,
 //     genre: ["action", "sci-fi"],
-//     age: 16,
 //     rating: 8.7,
 //     poster: "https://...",
 //   };

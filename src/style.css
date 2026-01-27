@@ -71,3 +71,42 @@ main {
     gap: 2rem;
     justify-content: space-between;
 }
+.filt {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: rgb(250, 234, 199);
+    padding: 2rem;
+    border: thin solid black;
+    border-radius: 2rem;
+    display: flex;
+}
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.genres input {
+    margin-right: 1rem;
+}
+.genres h3 {
+    width: 100%;
+}
+.radios {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.rating {
+    text-align: center;
+}
+.yearOfCreation {
+    text-align: center;
+
+}

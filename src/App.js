@@ -2,8 +2,26 @@ import "./style.css";
 import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import Main from "./components/Main";
-
+import FilterWindow from "./components/FilterWindow";
 function App() {
+  const genres = [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Drama",
+    "Thriller",
+    "Horror",
+    "Sci-Fi",
+    "Fantasy",
+    "Romance",
+    "Mystery",
+    "Crime",
+    "Animation",
+    "Documentary",
+    "Family",
+    "War",
+  ];
+
   const [films, setFilms] = useState([]);
   useEffect(() => {
     const film = {
@@ -11,7 +29,6 @@ function App() {
       title: "The Matrix",
       year: 1999,
       genre: ["action", "sci-fi"],
-      age: 16,
       rating: 8.7,
       description:
         "A computer hacker eleasra about the true thoise of reality and his seld in war againist art controllers",
@@ -20,26 +37,13 @@ function App() {
     };
 
     if (films.length === 0) {
-      setFilms((prev) => [
-        ...prev,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-        film,
-      ]);
+      setFilms((prev) => [...prev, film]);
     }
   }, []);
 
   return (
     <>
+      <FilterWindow genres={genres} />
       <Nav />
       <Main films={films} />
     </>
