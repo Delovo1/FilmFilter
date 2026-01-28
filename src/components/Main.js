@@ -9,10 +9,10 @@ export default function Main({ films }) {
             <h3>{film.title}</h3>
             <div className="categories">
               <p>{film.year}</p>
-              <p>{film.genre.join(" ")}</p>
+              <p className="genres">{film.genre.join(", ")}</p>
               <p>{film.rating}</p>
             </div>
-            <p>{film.description}</p>
+
             <div className="but">
               <button>Подробнее</button>
             </div>

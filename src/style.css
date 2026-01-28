@@ -20,7 +20,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 2rem;
-background-color: rgb(224, 245, 179);
+background-color: #3f713f;
 padding: 2rem 0;
 }
 nav img {
@@ -30,6 +30,14 @@ nav input {
     width: 30%;
     padding-left: 1rem;
     border-radius: 2rem;
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+
+}
+.reset {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
 }
 .film {
     width: 25rem;
@@ -39,14 +47,22 @@ nav input {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     border: thin solid black;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 .film p {
+    
     border-radius: 0.8rem;
     padding: 0.5rem;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(237, 236, 236);
 }
 .film img {
     width: 100%;
+    height: 35rem;
+    object-fit: cover;
+   
 }
 .categories {
     display: flex;
@@ -54,6 +70,16 @@ nav input {
 }
 .but {
     text-align: center;
+}
+.but button {
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+
+}
+.genres {
+    text-wrap: nowrap;
+    overflow: auto;
 }
 .film button {
     width: 90%;
@@ -69,25 +95,35 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-between;
+    justify-content: center;
 }
 .filt {
     position: absolute;
     width: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-    background-color: rgb(250, 234, 199);
+    background-color: rgb(82, 143, 84);
     padding: 2rem;
     border: thin solid black;
     border-radius: 2rem;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none; 
     display: flex;
+}
+
+.filt.open {
+    opacity: 1;
+    visibility: visible; 
+    pointer-events: auto; 
 }
 .genres {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .genres input {
     margin-right: 1rem;
