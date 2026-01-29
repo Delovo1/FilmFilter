@@ -420,3 +420,22 @@ export const addedFilms = [
       "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_.jpg",
   },
 ];
+export const genre = [
+  "Action",
+  "Adventure",
+  "Biography",
+  "Music",
+  "Western",
+  "Comedy",
+  "Drama",
+  "Thriller",
+  "Horror",
+  "Sci-Fi",
+  "Fantasy",
+  "Romance",
+  "Mystery",
+  "Crime",
+  "Animation",
+  "Family",
+  "War",
+];

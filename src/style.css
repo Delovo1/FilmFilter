@@ -51,6 +51,11 @@ nav input {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    transition: all 0.5s ease;
+}
+.film:hover {
+    transform: translateY(-1.5rem);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 .film p {
     
@@ -99,14 +104,14 @@ main {
 }
 .filt {
     position: absolute;
-    width: 50%;
+    width: 70%;
     left: 50%;
     transform: translate(-50%, 50%);
-    background-color: rgb(82, 143, 84);
+    background-color: #eaeff0;
     padding: 2rem;
     border: thin solid black;
     border-radius: 2rem;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
     opacity: 0;
     visibility: hidden; 
     pointer-events: none; 
@@ -117,7 +122,13 @@ main {
     opacity: 1;
     visibility: visible; 
     pointer-events: auto; 
+    z-index: 10000;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
+.filt.deleted {
+    opacity: 0;
+}
+
 .genres {
     display: flex;
     flex-wrap: wrap;
@@ -145,4 +156,52 @@ main {
 .yearOfCreation {
     text-align: center;
 
+}.filminfo {
+    left: 50%;
+    transform: translateX(-50%) translateY(100%); /* Начальная позиция - полностью снизу */
+    position: fixed;
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none; 
+    background-color: aliceblue;
+    bottom: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    align-items: start;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease; 
+}
+.poster{
+    width: 25rem;
+}
+.filminfo.open {
+    visibility: visible;
+    opacity: 100;
+    pointer-events: all;  
+    transform: translateX(-50%) translateY(0); 
+}
+.filminfo.closing {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+}
+.closed {
+    position: absolute;
+    width: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    background-color: rgb(159, 164, 169);
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+.params {
+    display: flex;
+    height: 21rem;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: start;
+    padding: 3rem;
 }
